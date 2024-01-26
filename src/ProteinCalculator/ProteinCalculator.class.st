@@ -27,6 +27,12 @@ ProteinCalculator >> gramsOfBeef: grams [
 ]
 
 { #category : 'as yet unclassified' }
+ProteinCalculator >> gramsOfBroccoli: grams [
+
+	totalProtein := totalProtein + (grams * (2.3 / 90))
+]
+
+{ #category : 'as yet unclassified' }
 ProteinCalculator >> gramsOfChicken: grams [
 
 	totalProtein := totalProtein + (grams * 0.27)
@@ -42,6 +48,12 @@ ProteinCalculator >> gramsOfMilk: grams [
 ProteinCalculator >> gramsOfOat: grams [
 
 	totalProtein := totalProtein + (grams * (10.7 / 81))
+]
+
+{ #category : 'as yet unclassified' }
+ProteinCalculator >> gramsOfPureProtein: grams [
+
+	totalProtein := totalProtein + grams
 ]
 
 { #category : 'as yet unclassified' }

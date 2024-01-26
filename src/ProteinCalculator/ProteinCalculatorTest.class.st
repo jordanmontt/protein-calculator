@@ -32,6 +32,14 @@ ProteinCalculatorTest >> testCalculateProteinInBeef [
 ]
 
 { #category : 'tests' }
+ProteinCalculatorTest >> testCalculateProteinInBroccoli [
+	"https://www.healthline.com/nutrition/foods/broccoli"
+
+	proteinCalculator gramsOfBroccoli: 90.
+	self assert: proteinCalculator totalProtein equals: 2.3
+]
+
+{ #category : 'tests' }
 ProteinCalculatorTest >> testCalculateProteinInChicken [
 	"https://www.justchartit.com/meat-protein-chart/"
 
@@ -68,9 +76,33 @@ ProteinCalculatorTest >> testCalculateProteinInOat [
 ]
 
 { #category : 'tests' }
+ProteinCalculatorTest >> testCalculateProteinInPureProtein [
+	"https://www.healthline.com/nutrition/quinoa#nutrients"
+
+	proteinCalculator gramsOfPureProtein: 100.
+	self assert: proteinCalculator totalProtein equals: 100
+]
+
+{ #category : 'tests' }
 ProteinCalculatorTest >> testCalculateProteinInQuinoa [
 	"https://www.healthline.com/nutrition/quinoa#nutrients"
 
 	proteinCalculator gramsOfQuinoa: 100.
 	self assert: proteinCalculator totalProtein equals: 4.4
+]
+
+{ #category : 'tests' }
+ProteinCalculatorTest >> testSeveralFoods [
+
+	proteinCalculator
+		eggs: 4;
+		gramsOfOat: 15;
+		bananas: 2;
+		gramsOfMilk: 350;
+		gramsOfPureProtein: 22;
+		gramsOfBeef: 250;
+		gramsOfQuinoa: 200;
+		gramsOfBroccoli: 30;
+		gramsOfPureProtein: 22.
+	self assert: proteinCalculator totalProtein closeTo: 160.1899
 ]
