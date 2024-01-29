@@ -15,51 +15,27 @@ ProteinCalculator >> bananas: bananas [
 ]
 
 { #category : 'as yet unclassified' }
-ProteinCalculator >> eggs: anInteger [ 
-
-	totalProtein := totalProtein + (anInteger * 6.5)
-]
-
-{ #category : 'as yet unclassified' }
-ProteinCalculator >> gramsOfBeef: grams [
+ProteinCalculator >> beef: grams [
 
 	totalProtein := totalProtein + (grams * 0.26)
 ]
 
 { #category : 'as yet unclassified' }
-ProteinCalculator >> gramsOfBroccoli: grams [
+ProteinCalculator >> broccoli: grams [
 
 	totalProtein := totalProtein + (grams * (2.3 / 90))
 ]
 
 { #category : 'as yet unclassified' }
-ProteinCalculator >> gramsOfChicken: grams [
+ProteinCalculator >> chicken: grams [
 
 	totalProtein := totalProtein + (grams * 0.27)
 ]
 
 { #category : 'as yet unclassified' }
-ProteinCalculator >> gramsOfMilk: grams [
+ProteinCalculator >> eggs: anInteger [ 
 
-	totalProtein := totalProtein + (grams * (8.14 / 249))
-]
-
-{ #category : 'as yet unclassified' }
-ProteinCalculator >> gramsOfOat: grams [
-
-	totalProtein := totalProtein + (grams * (10.7 / 81))
-]
-
-{ #category : 'as yet unclassified' }
-ProteinCalculator >> gramsOfPureProtein: grams [
-
-	totalProtein := totalProtein + grams
-]
-
-{ #category : 'as yet unclassified' }
-ProteinCalculator >> gramsOfQuinoa: grams [
-
-	totalProtein := totalProtein + (grams * (4.4 / 100))
+	totalProtein := totalProtein + (anInteger * 6.5)
 ]
 
 { #category : 'initialization' }
@@ -67,6 +43,30 @@ ProteinCalculator >> initialize [
 
 	super initialize.
 	totalProtein := 0
+]
+
+{ #category : 'as yet unclassified' }
+ProteinCalculator >> milk: grams [
+
+	totalProtein := totalProtein + (grams * (8.14 / 249))
+]
+
+{ #category : 'as yet unclassified' }
+ProteinCalculator >> oat: grams [
+
+	totalProtein := totalProtein + (grams * (10.7 / 81))
+]
+
+{ #category : 'as yet unclassified' }
+ProteinCalculator >> pureProtein: grams [
+
+	totalProtein := totalProtein + grams
+]
+
+{ #category : 'as yet unclassified' }
+ProteinCalculator >> quinoa: grams [
+
+	totalProtein := totalProtein + (grams * (4.4 / 100))
 ]
 
 { #category : 'accessing' }

@@ -27,7 +27,7 @@ ProteinCalculatorTest >> testCalculateProteinInBananas [
 ProteinCalculatorTest >> testCalculateProteinInBeef [
 	"https://www.justchartit.com/meat-protein-chart/"
 
-	proteinCalculator gramsOfBeef: 100.
+	proteinCalculator beef: 100.
 	self assert: proteinCalculator totalProtein equals: 26
 ]
 
@@ -35,7 +35,7 @@ ProteinCalculatorTest >> testCalculateProteinInBeef [
 ProteinCalculatorTest >> testCalculateProteinInBroccoli [
 	"https://www.healthline.com/nutrition/foods/broccoli"
 
-	proteinCalculator gramsOfBroccoli: 90.
+	proteinCalculator broccoli: 90.
 	self assert: proteinCalculator totalProtein equals: 2.3
 ]
 
@@ -43,7 +43,7 @@ ProteinCalculatorTest >> testCalculateProteinInBroccoli [
 ProteinCalculatorTest >> testCalculateProteinInChicken [
 	"https://www.justchartit.com/meat-protein-chart/"
 
-	proteinCalculator gramsOfChicken: 100.
+	proteinCalculator chicken: 100.
 	self assert: proteinCalculator totalProtein equals: 27
 ]
 
@@ -63,7 +63,7 @@ ProteinCalculatorTest >> testCalculateProteinInEggs [
 ProteinCalculatorTest >> testCalculateProteinInMilk [
 	"https://www.healthline.com/nutrition/milk#nutrition"
 
-	proteinCalculator gramsOfMilk: 249.
+	proteinCalculator milk: 249.
 	self assert: proteinCalculator totalProtein equals: 8.14
 ]
 
@@ -71,7 +71,7 @@ ProteinCalculatorTest >> testCalculateProteinInMilk [
 ProteinCalculatorTest >> testCalculateProteinInOat [
 	"https://www.healthline.com/nutrition/foods/oats"
 
-	proteinCalculator gramsOfOat: 81.
+	proteinCalculator oat: 81.
 	self assert: proteinCalculator totalProtein equals: 10.7
 ]
 
@@ -79,7 +79,7 @@ ProteinCalculatorTest >> testCalculateProteinInOat [
 ProteinCalculatorTest >> testCalculateProteinInPureProtein [
 	"https://www.healthline.com/nutrition/quinoa#nutrients"
 
-	proteinCalculator gramsOfPureProtein: 100.
+	proteinCalculator pureProtein: 100.
 	self assert: proteinCalculator totalProtein equals: 100
 ]
 
@@ -87,7 +87,7 @@ ProteinCalculatorTest >> testCalculateProteinInPureProtein [
 ProteinCalculatorTest >> testCalculateProteinInQuinoa [
 	"https://www.healthline.com/nutrition/quinoa#nutrients"
 
-	proteinCalculator gramsOfQuinoa: 100.
+	proteinCalculator quinoa: 100.
 	self assert: proteinCalculator totalProtein equals: 4.4
 ]
 
@@ -96,13 +96,13 @@ ProteinCalculatorTest >> testSeveralFoods [
 
 	proteinCalculator
 		eggs: 4;
-		gramsOfOat: 15;
+		oat: 15;
 		bananas: 2;
-		gramsOfMilk: 350;
-		gramsOfPureProtein: 22;
-		gramsOfBeef: 250;
-		gramsOfQuinoa: 200;
-		gramsOfBroccoli: 30;
-		gramsOfPureProtein: 22.
+		milk: 350;
+		pureProtein: 22;
+		beef: 250;
+		quinoa: 200;
+		broccoli: 30;
+		pureProtein: 22.
 	self assert: proteinCalculator totalProtein closeTo: 160.1899
 ]
