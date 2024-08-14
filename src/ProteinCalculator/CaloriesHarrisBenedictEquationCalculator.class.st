@@ -4,6 +4,20 @@ This calculation is done using the Harris–Benedict equations revised by Roza a
 Paper: https://zakboekdietetiek.nl/wp-content/uploads/2015/06/roza-1984.pdf
 
 Useful website: https://www.maxinutrition.com/blogs/sports/calories-to-cut
+
+It can be used to calculate the calories needed for cutting:
+
+
+```
+calculator := CaloriesHarrisBenedictEquationCalculator new
+		age: 26;
+		weight: 81 ""kg"";
+		height: 180 ""cm"";
+		moderateActivityLevel.
+		
+calories := calculator calculate.
+cutting := calories * 0.9 ""2636.1831150000003""
+```
 "
 Class {
 	#name : 'CaloriesHarrisBenedictEquationCalculator',
